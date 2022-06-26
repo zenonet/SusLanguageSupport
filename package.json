@@ -4,6 +4,9 @@
     "description": "Adds syntax highlighting for SusLang",
     "version": "0.0.1",
     "publisher": "zenonet",
+    "repository": {
+        "url": "https://github.com/zenonet/SusLanguageSupport"
+    },
     "engines": {
         "vscode": "^1.68.0"
     },
