@@ -1,0 +1,65 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "SusLang",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+
+		"keywords": {
+			"patterns": [
+			{
+				"name": "comment.line",
+				"match": "trashtalk .*|//.*"
+			},
+			{
+				"match": "(red|blue|green|pink|orange|yellow|black|white|purple|brown|cyan|lime|maroon|rose|banana|gray|tan|coral|he) (vented|killed|didVisual|wasWithMe)",
+				"captures": {
+					"1": {"name" : "constant.language"},
+					"2": {"name" : "keyword.control"}
+				}
+			},
+			{
+				"match": "red|blue|green|pink|orange|yellow|black|white|purple|brown|cyan|lime|maroon|rose|banana|gray|tan|coral|he",
+				"name":"constant.language"
+			},
+			{
+				"match": "(emergencyMeeting|report) ?(red|blue|green|pink|orange|yellow|black|white|purple|brown|cyan|lime|maroon|rose|banana|gray|tan|coral|he)?",
+				"captures": {
+					"1": {"name" : "keyword.control"},
+					"2": {"name" : "constant.language"}
+				}
+			},
+			{
+				"match": "(sus) (red|blue|green|pink|orange|yellow|black|white|purple|brown|cyan|lime|maroon|rose|banana|gray|tan|coral)",
+				"captures": {
+					"1": {"name" : "keyword.control"},
+					"2": {"name" : "constant.language"}
+				}
+			},
+			{
+				"match": "(red|blue|green|pink|orange|yellow|black|white|purple|brown|cyan|lime|maroon|rose|banana|gray|tan|coral|he) (wasWith) (red|blue|green|pink|orange|yellow|black|white|purple|brown|cyan|lime|maroon|rose|banana|gray|tan|coral|he)",
+				"captures": {
+					"1": {"name" : "constant.language"},
+					"2": {"name" : "keyword.control"},
+					"3": {"name" : "constant.language"}
+				}
+			},
+			{
+				"match": "who?",
+				"name":"keyword.control"
+			},
+			{
+				"match": "sus he",
+				"name":"invalid.illegal"
+			}
+		]
+		}
+	},
+	"scopeName": "source.sus"
+}

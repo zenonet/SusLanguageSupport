@@ -1,0 +1,15 @@
+{
+	"loop": {
+		"prefix": "loop",
+		"body": [
+			"sus $1",
+            "he $2",
+            "[",
+            "   $3",
+            "   sus $1",
+            "   he wasWithMe",
+            "]"
+        ],
+		"description": "cyan"
+	}
+}

@@ -1,0 +1,33 @@
+{
+    "name": "suslanglanguagesupport",
+    "displayName": "SusLangLanguageSupport",
+    "description": "Adds syntax highlighting for SusLang",
+    "version": "0.0.1",
+    "publisher": "zenonet",
+    "engines": {
+        "vscode": "^1.68.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Snippets"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "suslang",
+            "aliases": ["SusLang", "suslang"],
+            "extensions": [".sus"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "suslang",
+            "scopeName": "source.sus",
+            "path": "./syntaxes/suslang.tmLanguage.json"
+        }],
+        "snippets": [
+            {
+                "language": "suslang",
+                "path": "./snippets.json"
+            }
+        ]
+    }
+}
