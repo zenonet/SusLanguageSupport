@@ -3,5 +3,5 @@
 
 ## Features
 
->Syntax highlighting<br>
->The `loop` snippet
+* Syntax highlighting<br>
+* The `loop` snippet
