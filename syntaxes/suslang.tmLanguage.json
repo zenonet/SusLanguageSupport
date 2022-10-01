@@ -20,34 +20,34 @@
 			{
 				"match": "(red|blue|green|pink|orange|yellow|black|white|purple|brown|cyan|lime|maroon|rose|banana|gray|tan|coral|he) (vented|killed|didVisual|wasWithMe)",
 				"captures": {
-					"1": {"name" : "constant.language"},
+					"1": {"name" : "variable"},
 					"2": {"name" : "keyword.control"}
 				}
 			},
 			{
 				"match": "red|blue|green|pink|orange|yellow|black|white|purple|brown|cyan|lime|maroon|rose|banana|gray|tan|coral|he",
-				"name":"constant.language"
+				"name":"variable"
 			},
 			{
 				"match": "(emergencyMeeting|report) ?(red|blue|green|pink|orange|yellow|black|white|purple|brown|cyan|lime|maroon|rose|banana|gray|tan|coral|he)?",
 				"captures": {
 					"1": {"name" : "keyword.control"},
-					"2": {"name" : "constant.language"}
+					"2": {"name" : "variable"}
 				}
 			},
 			{
 				"match": "(sus) (red|blue|green|pink|orange|yellow|black|white|purple|brown|cyan|lime|maroon|rose|banana|gray|tan|coral)",
 				"captures": {
 					"1": {"name" : "keyword.control"},
-					"2": {"name" : "constant.language"}
+					"2": {"name" : "variable"}
 				}
 			},
 			{
 				"match": "(red|blue|green|pink|orange|yellow|black|white|purple|brown|cyan|lime|maroon|rose|banana|gray|tan|coral|he) (wasWith) (red|blue|green|pink|orange|yellow|black|white|purple|brown|cyan|lime|maroon|rose|banana|gray|tan|coral|he)",
 				"captures": {
-					"1": {"name" : "constant.language"},
+					"1": {"name" : "variable"},
 					"2": {"name" : "keyword.control"},
-					"3": {"name" : "constant.language"}
+					"3": {"name" : "variable"}
 				}
 			},
 			{
