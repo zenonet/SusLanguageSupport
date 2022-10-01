@@ -168,7 +168,7 @@ documents.onDidChangeContent(async change => {
 	let problems = 0;
 	let diagnostics: Diagnostic[] = [];
 
-	check("\w", DiagnosticSeverity.Warning, "")
+	check(RegExp("\w"), DiagnosticSeverity.Warning, "")
 
 
 
