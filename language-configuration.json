@@ -17,7 +17,7 @@
     ],
     
     "indentationRules": {
-        "increaseIndentPattern": "^((?!\\/\\/).)*(\\{[^}\"'`]*|\\([^)\"'`]*|\\[[^\\]\"'`]*)$",
-        "decreaseIndentPattern": "^((?!.*?\\/\\*).*\\*/)?\\s*[\\}\\]].*$"
+        "increaseIndentPattern": "^(.*[.*)|(.*#define keyword \\w.*)$",
+        "decreaseIndentPattern": "^(.*].*)|(.*#define keyword end.*)$"
       }
 }

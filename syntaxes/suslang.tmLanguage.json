@@ -13,52 +13,79 @@
 
 		"keywords": {
 			"patterns": [
-			{
-				"name": "comment.line",
-				"match": "trashtalk .*|//.*"
-			},
-			{
-				"match": "(red|blue|green|pink|orange|yellow|black|white|purple|brown|cyan|lime|maroon|rose|banana|gray|tan|coral|he) (vented|killed|didVisual|wasWithMe)",
-				"captures": {
-					"1": {"name" : "variable"},
-					"2": {"name" : "keyword.control"}
+				{
+					"name": "comment.line",
+					"match": "trashtalk .*|//.*"
+				},
+				{
+					"match": "(red|blue|green|pink|orange|yellow|black|white|purple|brown|cyan|lime|maroon|rose|banana|gray|tan|coral|he|she) (vented|killed|didVisual|wasWithMe)",
+					"captures": {
+						"1": {"name" : "variable.name"},
+						"2": {"name" : "keyword"}
+					}
+				},
+				{
+					"match": "red|blue|green|pink|orange|yellow|black|white|purple|brown|cyan|lime|maroon|rose|banana|gray|tan|coral|he|she",
+					"name":"variable.name"
+				},
+				{
+					"match": "(emergencyMeeting|report) ?(red|blue|green|pink|orange|yellow|black|white|purple|brown|cyan|lime|maroon|rose|banana|gray|tan|coral|he|she)?",
+					"captures": {
+						"1": {"name" : "keyword"},
+						"2": {"name" : "variable.name"}
+					}
+				},
+				{
+					"match": "(sus) (red|blue|green|pink|orange|yellow|black|white|purple|brown|cyan|lime|maroon|rose|banana|gray|tan|coral)",
+					"captures": {
+						"1": {"name" : "keyword"},
+						"2": {"name" : "variable.name"}
+					}
+				},
+				{
+					"match": "(red|blue|green|pink|orange|yellow|black|white|purple|brown|cyan|lime|maroon|rose|banana|gray|tan|coral|he|she) (wasWith) (red|blue|green|pink|orange|yellow|black|white|purple|brown|cyan|lime|maroon|rose|banana|gray|tan|coral|he|she)",
+					"captures": {
+						"1": {"name" : "variable.name"},
+						"2": {"name" : "keyword"},
+						"3": {"name" : "variable.name"}
+					}
+				},
+				{
+					"match": "who?",
+					"name":"keyword"
+				},
+				{
+					"match": "sus (he|she)",
+					"name":"invalid.illegal"
+				},
+				{
+					"match": "#define color \\w",
+					"name":"keyword.control"
+				},
+				{
+					"match": "(#define keyword) (\\w) (red|blue|green|pink|orange|yellow|black|white|purple|brown|cyan|lime|maroon|rose|banana|gray|tan|coral) (red|blue|green|pink|orange|yellow|black|white|purple|brown|cyan|lime|maroon|rose|banana|gray|tan|coral)?",
+					"captures": {
+						"1": {"name" : "keyword.control"},
+						"2": {"name" : "keyword"},
+						"3": {"name" : "variable.name"},
+						"4": {"name" : "variable.name"}
+					}
+				},
+				{
+					"match": "(#define suspect) (red|blue|green|pink|orange|yellow|black|white|purple|brown|cyan|lime|maroon|rose|banana|gray|tan|coral)",
+					"captures": {
+						"1": {"name" : "keyword.control"},
+						"3": {"name" : "variable.name"}
+					}
+				},
+				{
+					"match": "(#define import) (\\w)",
+					"captures": {
+						"1": {"name" : "keyword.control"},
+						"3": {"name" : "string"}
+					}
 				}
-			},
-			{
-				"match": "red|blue|green|pink|orange|yellow|black|white|purple|brown|cyan|lime|maroon|rose|banana|gray|tan|coral|he",
-				"name":"variable"
-			},
-			{
-				"match": "(emergencyMeeting|report) ?(red|blue|green|pink|orange|yellow|black|white|purple|brown|cyan|lime|maroon|rose|banana|gray|tan|coral|he)?",
-				"captures": {
-					"1": {"name" : "keyword.control"},
-					"2": {"name" : "variable"}
-				}
-			},
-			{
-				"match": "(sus) (red|blue|green|pink|orange|yellow|black|white|purple|brown|cyan|lime|maroon|rose|banana|gray|tan|coral)",
-				"captures": {
-					"1": {"name" : "keyword.control"},
-					"2": {"name" : "variable"}
-				}
-			},
-			{
-				"match": "(red|blue|green|pink|orange|yellow|black|white|purple|brown|cyan|lime|maroon|rose|banana|gray|tan|coral|he) (wasWith) (red|blue|green|pink|orange|yellow|black|white|purple|brown|cyan|lime|maroon|rose|banana|gray|tan|coral|he)",
-				"captures": {
-					"1": {"name" : "variable"},
-					"2": {"name" : "keyword.control"},
-					"3": {"name" : "variable"}
-				}
-			},
-			{
-				"match": "who?",
-				"name":"keyword.control"
-			},
-			{
-				"match": "sus he",
-				"name":"invalid.illegal"
-			}
-		]
+			]
 		}
 	},
 	"scopeName": "source.sus"

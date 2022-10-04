@@ -1,5 +1,6 @@
 {
-	"loop": {
+	"loop": 
+    {
 		"prefix": "loop",
 		"body": [
 			"sus $1",
@@ -10,6 +11,32 @@
             "   he wasWithMe",
             "]"
         ],
-		"description": "cyan"
-	}
+		"description": "Creates a loop"
+	},
+    "keywordDefinition":
+    {
+        "prefix": "keyword",
+		"body": [
+			"#define keyword $1",
+            "   $2",
+            "#define keyword end"
+        ],
+		"description": "Creates a custom keyword definition"
+    },
+    "colorDefinition":
+    {
+        "prefix": "color",
+		"body": [
+			"#define color $1"
+        ],
+		"description": "Creates a custom color definition"
+    },
+    "suspectDefinition":
+    {
+        "prefix": "suspect",
+		"body": [
+			"#define suspect $1"
+        ],
+		"description": "Creates a suspect definition definition"
+    }
 }
