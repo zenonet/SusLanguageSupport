@@ -10,7 +10,6 @@
 		}
 	],
 	"repository": {
-
 		"keywords": {
 			"patterns": [
 				{
@@ -59,11 +58,15 @@
 					"name":"invalid.illegal"
 				},
 				{
-					"match": "#define color \\w",
+					"match": "(#define color) (\\w+)",
+					"captures": {
+						"1": {"name": "keyword.control"},
+						"2": {"name": "variable"}
+					},
 					"name":"keyword.control"
 				},
 				{
-					"match": "(#define keyword) (\\w) (red|blue|green|pink|orange|yellow|black|white|purple|brown|cyan|lime|maroon|rose|banana|gray|tan|coral) (red|blue|green|pink|orange|yellow|black|white|purple|brown|cyan|lime|maroon|rose|banana|gray|tan|coral)?",
+					"match": "(#define keyword) (\\w) (red|blue|green|pink|orange|yellow|black|white|purple|brown|cyan|lime|maroon|rose|banana|gray|tan|coral)? (red|blue|green|pink|orange|yellow|black|white|purple|brown|cyan|lime|maroon|rose|banana|gray|tan|coral)?",
 					"captures": {
 						"1": {"name" : "keyword.control"},
 						"2": {"name" : "keyword"},
