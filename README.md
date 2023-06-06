@@ -5,4 +5,4 @@ This Visual Studio Code extension adds basic support for [SusLang](http://github
 ## Features
 
 * Syntax highlighting<br>
-* Snippet
+* Code Snippets
